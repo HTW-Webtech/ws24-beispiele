@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+    <!-- Background circle -->
+    <circle cx="100" cy="100" r="90" fill="#FEFADC"/>
+
+    <!-- Central sharing hands forming a circle -->
+    <g transform="translate(100 100)">
+        <!-- Hand 1 -->
+        <path d="M0,-60 C10,-60 20,-50 20,-40 C20,-30 10,-25 0,-25 C-10,-25 -20,-30 -20,-40 C-20,-50 -10,-60 0,-60"
+              fill="#F3B391" transform="rotate(0)"/>
+        <!-- Hand 2 -->
+        <path d="M0,-60 C10,-60 20,-50 20,-40 C20,-30 10,-25 0,-25 C-10,-25 -20,-30 -20,-40 C-20,-50 -10,-60 0,-60"
+              fill="#F6D4BA" transform="rotate(72)"/>
+        <!-- Hand 3 -->
+        <path d="M0,-60 C10,-60 20,-50 20,-40 C20,-30 10,-25 0,-25 C-10,-25 -20,-30 -20,-40 C-20,-50 -10,-60 0,-60"
+              fill="#FEEA00" transform="rotate(144)"/>
+        <!-- Hand 4 -->
+        <path d="M0,-60 C10,-60 20,-50 20,-40 C20,-30 10,-25 0,-25 C-10,-25 -20,-30 -20,-40 C-20,-50 -10,-60 0,-60"
+              fill="#F3B391" transform="rotate(216)"/>
+        <!-- Hand 5 -->
+        <path d="M0,-60 C10,-60 20,-50 20,-40 C20,-30 10,-25 0,-25 C-10,-25 -20,-30 -20,-40 C-20,-50 -10,-60 0,-60"
+              fill="#F6D4BA" transform="rotate(288)"/>
+    </g>
+
+    <!-- Central circle -->
+    <circle cx="100" cy="100" r="25" fill="#3F612D"/>
+
+    <!-- Inner connecting lines -->
+    <g stroke="#3F612D" stroke-width="3" fill="none">
+        <path d="M100,75 L100,125"/>
+        <path d="M75,100 L125,100"/>
+        <circle cx="100" cy="100" r="15" />
+    </g>
+
+    <!-- Optional: Add a subtle outer ring -->
+    <circle cx="100" cy="100" r="88" stroke="#3F612D" stroke-width="2" fill="none"/>
+</svg>
