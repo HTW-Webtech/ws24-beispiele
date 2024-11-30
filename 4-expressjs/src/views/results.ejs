@@ -1,0 +1,22 @@
+<%- include('./header.ejs') %>
+
+<div class="flex flex-column gap-1">
+  <h1>
+    <%= poll.name %> – Ergebnisse
+  </h1>
+
+  <% options.forEach(option => {
+    const percentage = totalVotes ? (option.votes / totalVotes * 100).toFixed(1) : 0;
+    %>
+    <div class="flex">
+      <div class="answer"><%= option.text %></div>
+      <div class="flexitem progress-wrapper">
+        <div class="progress-bar" style="width: <%= percentage %>%"><strong><%= option.votes %></strong> (<%= percentage %>%)</div>
+      </div>
+    </div>
+  <% }) %>
+
+  <a href="/<%= poll.id %>/results.csv" class="button">Ergebnisse als CSV herunterladen</a>
+</div>
+
+<%- include('./footer.ejs') %>

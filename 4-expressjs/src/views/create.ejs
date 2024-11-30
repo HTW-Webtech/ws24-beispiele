@@ -1,0 +1,20 @@
+<%- include('./header.ejs') %>
+
+<h1>Neue Umfrage erstellen</h1>
+<p class="subtitle">Bereits <%= count %> Umfragen erstellt. Werde Teil der Community.</p>
+
+<form class="poll-form flex flex-column gap-1" action="/" method="post">
+  <label>
+    <span>Frage</span>
+    <input name="question" type="text" placeholder="Bester Wochentag?">
+  </label>
+
+  <label>
+    <span>Antwortmöglichkeiten</span>
+    <textarea name="answers" rows="10" placeholder="Montag"></textarea>
+  </label>
+
+  <button type="submit">Umfrage erstellen</button>
+</form>
+
+<%- include('./footer.ejs') %>

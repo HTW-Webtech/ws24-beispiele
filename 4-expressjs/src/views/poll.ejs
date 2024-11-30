@@ -1,0 +1,15 @@
+<%- include('./header.ejs') %>
+
+<div class="flex flex-column gap-1">
+  <h1>
+    <%= poll.name %>
+  </h1>
+
+  <form class="poll-form flex flex-column gap-1" action="/<%= poll.id %>" method="post">
+    <% options.forEach(option=> { %>
+      <button type="submit" name="option" value="<%= option.id %>"><%= option.text %></button>
+    <% }) %>
+  </form>
+</div>
+
+<%- include('./footer.ejs') %>

@@ -1,0 +1,21 @@
+{
+  "name": "poller",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20.6.0"
+  },
+  "scripts": {
+    "start": "node --env-file=.env src/index.js",
+    "dev": "node --env-file=.env --watch src/index.js",
+    "format": "prettier --write \"src/**/*.{js,css}\""
+  },
+  "dependencies": {
+    "@libsql/client": "^0.14.0",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "prettier": "^3.4.1"
+  }
+}
