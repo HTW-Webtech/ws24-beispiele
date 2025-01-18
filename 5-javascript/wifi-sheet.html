@@ -1,0 +1,92 @@
+<h1>WiFi</h1>
+
+<form id="form">
+  <label>
+    <span>SSID:</span>
+    <input id="ssid" placeholder="SSID" />
+  </label>
+  <label>
+    <span>Password:</span>
+    <input id="password" placeholder="Password" />
+  </label>
+  <label>
+    <span>Encryption:</span>
+    <select id="enc">
+      <option>WPA</option>
+      <option>WEP</option>
+    </select>
+  </label>
+  <label>
+    <span>Is Hidden?</span>
+    <input type="checkbox" id="hidden" />
+  </label>
+
+  <button id="print" onclick="window.print()">Print</button>
+</form>
+
+<div id="qrcode">
+  <img />
+</div>
+
+<style>
+  h1,
+  form,
+  #qrcode {
+    width: 395px;
+    margin: 2rem auto;
+    font: 16px sans-serif;
+  }
+
+  h1 {
+    font-size: 64px;
+    border-bottom: 1px solid black;
+  }
+
+  h1,
+  label,
+  button {
+    display: flex;
+    width: 100%;
+    margin-bottom: 1rem;
+    justify-content: center;
+  }
+
+  label > * {
+    flex: 1;
+  }
+
+  label > span {
+    max-width: 8rem;
+    margin-right: 1rem;
+  }
+
+  @media print {
+    #print {
+      display: none;
+    }
+
+    label,
+    input,
+    select {
+      border: none;
+      background: none;
+      font-size: 24px;
+    }
+  }
+</style>
+<script src="https://cdn.rawgit.com/amanuel/JS-HTML5-QRCode-Generator/master/qrcode.js"></script>
+<script src="https://cdn.rawgit.com/amanuel/JS-HTML5-QRCode-Generator/master/html5-qrcode.js"></script>
+
+<script>
+  const form = document.getElementById('form');
+  const ssid = document.getElementById('ssid');
+  const pw = document.getElementById('password');
+  const enc = document.getElementById('enc');
+  const hidden = document.getElementById('hidden');
+  const qrcode = document.getElementById('qrcode');
+
+  form.addEventListener('change', (event) => {
+    const text = `WIFI:S:${ssid.value};T:${enc.value};P:${pw.value};H:${hidden.checked};;`;
+    qrcode.replaceChild(showQRCode(text), qrcode.lastChild);
+  });
+</script>
