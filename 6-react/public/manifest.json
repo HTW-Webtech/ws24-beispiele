@@ -1,0 +1,20 @@
+{
+  "short_name": "Pokdedex",
+  "name": "Your Pokemon Info Guide",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "256x256 64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#f7c406",
+  "background_color": "#f7c406"
+}
